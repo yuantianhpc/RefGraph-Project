@@ -28,12 +28,12 @@ grep U bothEnd_kraken2.txt > unclassified.txt
 awk ‘{print $2}’ unclassified.txt > unclassified_readID.txt
 grep -w -A 1 -f unclassified_readID.txt megahit_results_bothEnd/final.contigs.fa --no-group-separator > final_contigs_bothEnd.fa
 
-kraken2 --db minikraken2_v1_8GB megahit_results_r1/final.contigs.fa > oneEnd_r1_kraken2.t$
+kraken2 --db minikraken2_v1_8GB megahit_results_r1/final.contigs.fa > oneEnd_r1_kraken2.txt
 grep U oneEnd_r1_kraken2.txt > unclassified_r1.txt
 awk ‘{print $2}’ unclassified_r1.txt > unclassified_r1_readID.txt
 grep -w -A 1 -f unclassified_r1_readID.txt megahit_results_r1/final.contigs.fa --no-group-separator > final_contigs_r1.fa
 
-kraken2 --db minikraken2_v1_8GB megahit_results_r2/final.contigs.fa > oneEnd_r2_kraken2.t$
+kraken2 --db minikraken2_v1_8GB megahit_results_r2/final.contigs.fa > oneEnd_r2_kraken2.txt
 grep U oneEnd_r2_kraken2.txt > unclassified_r2.txt
 awk ‘{print $2}’ unclassified_r2.txt > unclassified_r2_readID.txt
 grep -w -A 1 -f unclassified_r2_readID.txt megahit_results_r2/final.contigs.fa --no-group-separator > final_contigs_r2.fa
